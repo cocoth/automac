@@ -22,9 +22,9 @@ usage(){
 			exit 0 &
 			echo -en "Enter TARGET: "
 			read t 
-			ifconfig $1 down
+			ifconfig $pilihan down
 			macchanger -m $t | grep "New MAC: "
-			ifconfig $1 up
+			ifconfig $pilihan up
 			exit
 		fi
 
