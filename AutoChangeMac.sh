@@ -18,7 +18,7 @@ usage(){
 			exit
 		fi
 		if [[ $pilihan > 1 ]]; then
-			mate-terminal  --hide-menubar --geometry=93x41+1+0 -t monitoring -x airodump-ng $1
+			mate-terminal  --hide-menubar --geometry=93x41+1+0 -t monitoring -x airodump-ng $pilihan
 			exit 0 &
 			echo -en "Enter TARGET: "
 			read t 
