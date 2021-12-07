@@ -23,7 +23,7 @@ usage(){
 			echo -en "Enter TARGET: "
 			read t 
 			ifconfig $pilihan down
-			macchanger -m $t | grep "New MAC: "
+			macchanger -m $t $pilihan | grep "New MAC: "
 			ifconfig $pilihan up
 			exit
 		fi
@@ -55,7 +55,7 @@ if [[ $1 > 0 ]]; then
 	echo -en "Enter TARGET: "
 	read t 
 	ifconfig $1 down
-	macchanger -m $t | grep "New MAC: "
+	macchanger -m $t $1 | grep "New MAC: "
 	ifconfig $1 up
 	exit
 fi
